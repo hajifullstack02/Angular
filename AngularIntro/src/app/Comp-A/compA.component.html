@@ -1,0 +1,27 @@
+<!-- 1.	Interpolation {{ }} → Display values in template.
+2.	Property Binding [ ] → Set DOM element properties from component.
+3.	Event Binding ( ) → Trigger component methods from user actions.
+4.	Two-Way Binding [( )] → Sync data both ways (component ⇆ view). -->
+
+
+
+<div class="container">
+  <!-- String Interpolation -->
+  <h1>{{ title }}</h1>
+
+  <!-- Property Binding -->
+  <img [src]="imageUrl" alt="Angular Logo" width="150">
+  <br><br>
+
+  <!-- Event Binding -->
+  <button (click)="onButtonClick()" class="spl-btn">Click Me</button>
+  <button (click)="toggleImage()">Toggle Image</button>
+  <br><br>
+
+  <!-- Two-Way Data Binding -->
+  <input [(ngModel)]="username" placeholder="Enter your name">
+  <p>Hello, {{ username }} !</p>
+
+  <!-- Disabled button example with property binding -->
+  <button [disabled]="isDisabled">I am {{ isDisabled ? 'Disabled' : 'Enabled' }}</button>
+</div>
