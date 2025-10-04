@@ -1,0 +1,55 @@
+  
+<!-- 
+
+Attrubite direcives. Apperance ..
+ngStyle
+ngClass
+
+
+ngIf
+Localref --------------------------VVVVVVVVVVVVVVVVVVVVVVVVVIMP
+ngTemplate
+ngIf and else
+ngTemplate
+
+ngFor
+ngSwitch -->
+
+<!-- [ngStyle] -->
+<div class="container"[ngStyle]="{'background-color':mode ,
+          'color':fontColor}">
+   <div class="mode" >
+    <button (click)="onButtonClick()" class="mode">Mode🌙</button>
+    <p>hi haji!</p>
+</div>
+
+<!-- ngClass -->
+<div [ngClass]= "colorType == 'brown'? 'red':'blue'"> text color</div>
+ <br>
+
+ <!-- *ngIf -->
+<div *ngIf="_ename =='haji'">{{_ename}} is misard Employee</div>
+<br>
+<div *ngIf="isLogging =='Admin';else userlogin">Logged in as Admin</div>
+
+<ng-template #userlogin>
+    <p>Logged in as user</p>
+</ng-template>
+
+<!-- *ngFor -->
+<ul *ngFor="let emp of employees;let i=index  ">
+<li>{{i}}--{{emp}}</li>
+</ul>
+
+<!-- *ngSwitch="" -->
+ <div [ngSwitch]="day">
+ <p *ngSwitchCase="1">Today is Sunday</p>
+ <p *ngSwitchCase="2">Today is Monday</p>
+ <p *ngSwitchCase="3">Today is Tuesday</p>
+ <p *ngSwitchCase="4">Today is Wednesday</p>
+ <p *ngSwitchCase="5">Today is Thursday</p>
+ <p *ngSwitchCase="6">Today is Friday</p>
+ <p *ngSwitchCase="7">Today is Saturday</p>
+ 
+ </div>
+</div>
