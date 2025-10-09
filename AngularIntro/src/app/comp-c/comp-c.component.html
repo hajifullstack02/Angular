@@ -1,0 +1,62 @@
+
+
+<div style="text-align: center; margin-top: 20px;max-width: max-content;">
+<p #paragraph>Hello world !!!!</p>
+
+<button (click)="btnclickme()" class="btn btn-warning">clickme</button>
+<br>
+<br>
+ <span #spanName>Hello world!!!!</span>
+<br>
+ <br>
+ 
+ <input type="text" style="margin-top: 2px;margin-left: 30px;margin-right: 30px;" class="form-control border border-danger" #firstName/>
+<br>
+<br>
+ <button class="btn btn-success" (click)="btnClick()">Click</button> 
+
+ <br>
+ <br>
+ <ng-content>
+ </ng-content>
+
+ <hr>
+<h1>Div</h1>
+<div
+     *ngFor="let x of [100,200,300]">
+    <p>{{x}}</p>
+</div>
+
+
+
+<h1>ng-container</h1>
+<ng-container 
+     *ngFor="let x of [100,200,300]">
+    <p>{{x}}</p>
+</ng-container>
+
+
+<hr>
+<h1>Dynamic Templates</h1>
+<ng-template let-fn ="Firstname" 
+             let-ln ="lastname"
+             let-hm = "Hometown" 
+             #testTemplate>
+<form>
+    <input [value]="fn" type="text" placeholder="firstname">
+    <br>
+    <input [value]="ln"  type="text" placeholder="lastname">
+    <br>
+    <input [value]="hm"  type="text" placeholder="homeloaction">
+</form>
+</ng-template>
+
+
+<ng-container #containerRef>
+</ng-container>
+
+<button (click)="btnClickme()" style="margin-bottom:30px ;" class="btn btn-info">
+    Click me For Generate the form
+</button>
+
+ </div>

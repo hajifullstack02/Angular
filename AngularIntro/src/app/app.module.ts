@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import {CompAComponent} from '../app/Comp-A/compA.component';
 import { FormsModule } from '@angular/forms';
 import { CompBComponent } from './comp-b/comp-b.component';
+import { CompCComponent } from './comp-c/comp-c.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompAComponent,
     CompBComponent,
+    CompCComponent,
   ],
   imports: [
     BrowserModule,
