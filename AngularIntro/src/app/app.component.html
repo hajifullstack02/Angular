@@ -3,6 +3,17 @@
 
 <!-- <Comp-A></Comp-A> -->
  <!-- <app-comp-b></app-comp-b> -->
-<app-comp-c>
+<!-- <app-comp-c>
     <input type="text" class="text-primary" #lastName placeholder="last Name">
-</app-comp-c>
+</app-comp-c> -->
+<app-comp-d 
+[inputStudentName]     = "StudentName" 
+[inputStudentLocation] = "StudentLocation"
+[inputStudentAge]      = "StudentAge"
+[inputStudentDetails]  = "StudentDetails"
+[inputStudentHobbies]  = "StudentName"
+(SendStudent)          = "showStudentMessage($event, 10 , 'IndianLaw' )"  
+(SendStudentSubjects)  = "showStudnetBooks($event)"
+>
+
+</app-comp-d>

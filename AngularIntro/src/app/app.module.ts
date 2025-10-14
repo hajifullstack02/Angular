@@ -6,6 +6,7 @@ import {CompAComponent} from '../app/Comp-A/compA.component';
 import { FormsModule } from '@angular/forms';
 import { CompBComponent } from './comp-b/comp-b.component';
 import { CompCComponent } from './comp-c/comp-c.component';
+import { CompDComponent } from './comp-d/comp-d.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CompCComponent } from './comp-c/comp-c.component';
     CompAComponent,
     CompBComponent,
     CompCComponent,
+    CompDComponent,
   ],
   imports: [
     BrowserModule,
