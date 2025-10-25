@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="col-8 ">
+<table class="table table-bordered table-hover border-primary table-success ">
+  <thead>
+    <tr>
+       <th>ID</th>
+       <th>Name</th>
+       <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of Orders">
+        <td>
+              <a class="btn table-hover btn-outline-warning"
+                  (click)="evtNavigation(item.OrderID)">
+                         {{item.OrderID}}</a></td>
+                    <td>{{item.OrderName}}</td>
+                    <td>{{item.OrderLocation}}</td>
+       
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>

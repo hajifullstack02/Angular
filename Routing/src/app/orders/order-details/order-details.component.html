@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="col-12">
+    <h4>You have selected the {{ OrderInfo.orderID }} info</h4>
+    <table class="table table-bordered mb-4">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>FoodName</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Location</th>
+          <th>Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of SelectedCustoemrs">
+          <td>{{ item.CustomerName }}</td>
+          <td>{{ item.CustomerFoodName }}</td>
+          <td>{{ item.CustomerAge }}</td>
+          <td>{{ item.CustomerGender }}</td>
+          <td>{{ item.CusotmerLocation }}</td>
+          <td>{{ item.Information }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button  class="btn btn-outline-danger" (click)="backbtn()" >Back</button>
+  </div>
+</div>

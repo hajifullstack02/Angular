@@ -6,6 +6,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderDetailsComponent } from './orders/order-details/order-details.component';
 
 
 //Declaring the routes
@@ -27,6 +30,18 @@ const routes: Routes =[
   path:'aboutus',
   component:AboutusComponent
 },
+{
+  path:'notfound',
+  component:NotfoundComponent
+},
+{
+  path:'orders',
+  component:OrdersComponent
+},
+{
+  path:'order-details/:orderID',
+  component:OrderDetailsComponent
+}
 
 
 ]
@@ -39,6 +54,9 @@ const routes: Routes =[
     HomepageComponent,
     LoginComponent,
     AboutusComponent,
+    NotfoundComponent,
+    OrdersComponent,
+    OrderDetailsComponent,
    
   ],
   imports: [
