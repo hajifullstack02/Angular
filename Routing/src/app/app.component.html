@@ -1,0 +1,29 @@
+<!-- step1. need  Declare the routes path in app.module.ts -->
+ <!-- step2.register the routes inside app.module.ts in imports[]  -->
+  <!--  step 3 : use the routeroutlet to capture the component --> 
+
+<h2>Welcome To webApp</h2>
+<hr>
+<div class="container mt-3">
+  <div class="d-flex justify-content-end">
+    <nav class="navbar-nav navbar-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav d-flex flex-row">
+
+        <li class="nav-item">
+            <a style="padding:10px" class=" btn btn-outline-primary me-2 " routerLink="login">Login</a>
+        </li>
+          <li class="nav-item">
+            <a style="padding:10px" class=" btn btn-outline-primary me-2" routerLink="homepage">Home</a>  
+          </li>
+          <li class="nav-item">
+            <a style="padding:10px" class=" btn btn-outline-primary me-2" routerLink="aboutus">aboutus</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<router-outlet>
+</router-outlet>
