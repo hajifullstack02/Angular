@@ -15,8 +15,19 @@ export class OrdersComponent implements OnInit {
       this.Orders = this.orderservice.getOrders();
   }
 
-  evtNavigation(orderID:any){
-     this.router.navigate(['/order-details', orderID])
-  }
+  // evtNavigation(orderID:any){
+  //    //this.router.navigate(['/order-details', orderID])    //for params
+  
+  //    this.router.navigate(['/order-details'], {queryParams:{ID:orderID}})
+  // }
+  evtNavigation(orderID: number) {
+  // this.router.navigate(['order-details'], {
+  //   queryParams: { ID: orderID }
+  // });
 
+  // this.router.navigate(['order-details'], {
+  // fragment: 'ID:orderID'
+// });
+
+}
 }

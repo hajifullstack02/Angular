@@ -10,10 +10,32 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of Orders">
-        <td>
-              <a class="btn table-hover btn-outline-warning"
-                  (click)="evtNavigation(item.OrderID)">
-                         {{item.OrderID}}</a></td>
+       
+
+           
+                    <td>
+                        <a [routerLink]="'/orders/orderstest'">Test Link</a>
+                    </td>
+                  
+                  
+                  
+                    <td>
+          <!--Handle based on the Params-->
+                     <a [routerLink]="['/order-details', item.OrderID]">{{item.OrderID}}</a> 
+
+
+
+  <!--Handle based on the queryParams-->
+     <!-- <a [routerLink]="['/order-details']"
+         [queryParams]="{'ID': item.OrderID}" >{{item.OrderID}}</a>  -->
+
+<!--Handle based on the queryParams-->
+ <!-- <a [routerLink]="['/order-details']"
+     fragment="{{item.OrderID}}">{{item.OrderID}}</a> -->
+              <!-- <a class="btn table-hover btn-outline-info"
+                  (click)="evtNavigation(item.OrderID)"> -->
+                          <!-- {{item.OrderID}}</a> -->
+                        </td>
                     <td>{{item.OrderName}}</td>
                     <td>{{item.OrderLocation}}</td>
        
@@ -22,3 +44,4 @@
 </table>
 </div>
 </div>
+<router-outlet></router-outlet>

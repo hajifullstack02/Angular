@@ -9,6 +9,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderDetailsComponent } from './orders/order-details/order-details.component';
+import { FormsModule } from '@angular/forms';
+import { authGuard } from './auth.guard';
+import { exitGuard } from './exit.guard';
+import { OrdersTestComponent } from './orders-test/orders-test.component';
 
 
 //Declaring the routes
@@ -36,13 +40,26 @@ const routes: Routes =[
 },
 {
   path:'orders',
-  component:OrdersComponent
+  component:OrdersComponent,
+  children:[
+      {
+        path:'orderstest',                         //https://localhost:4200/orders/orderstest
+        component:OrdersTestComponent
+      }]
 },
 {
-  path:'order-details/:orderID',
+  path:'order-details/:orderID',   // this for params
+   
+  component:OrderDetailsComponent,
+  canActivate:[authGuard],
+  canDeactivate:[exitGuard]
+},
+
+{
+  path:'order-details',         // for query params
+   
   component:OrderDetailsComponent
 }
-
 
 ]
 
@@ -57,10 +74,11 @@ const routes: Routes =[
     NotfoundComponent,
     OrdersComponent,
     OrderDetailsComponent,
+    OrdersTestComponent,
    
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(routes)        //register the routes
+    BrowserModule,FormsModule,RouterModule.forRoot(routes)        //register the routes
   ],
   providers: [],
   bootstrap: [AppComponent]
